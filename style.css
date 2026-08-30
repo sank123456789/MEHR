@@ -5,11 +5,10 @@ body{
 .container { 
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     color: #F8FAFC;
-    font-size: 30px;
-    place-items: center;
+    font-size: 20px;
 }
 
 #background {
@@ -21,69 +20,83 @@ body{
     z-index: -1;
 }
 
-.cover{
+.cover {
     position: absolute;
-    height:0px;
-    width:0px;
-
+    height: 0;
+    width: 0;
 }
 
-.cover.top{
-    border-left: 200px solid transparent;
-    border-right: 200px solid transparent;
-    border-bottom: 150px solid transparent;
-    border-top: 150px solid #F8FAFC;
-    transform-origin:  top;
+.cover.top {
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+    border-bottom: 105px solid transparent;
+    border-top: 105px solid #F8FAFC;
+    transform-origin: top;
 }
 
-.cover.bottom.right{
-    border-left: 200px solid transparent;
-    border-right: 200px solid #0080ff;
-    border-bottom: 150px solid #0080ff;
-    border-top: 150px solid transparent;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+.cover.bottom.right {
+    border-left: 140px solid transparent;
+    border-right: 140px solid #0080ff;
+    border-bottom: 105px solid #0080ff;
+    border-top: 105px solid transparent;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
     z-index: 1;
-
 }
 
-.cover.left{
-    border-left: 200px solid #7fb4ea;
-    border-right: 200px solid transparent;
-    border-bottom: 150px solid transparent;
-    border-top: 150px solid transparent;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+.cover.left {
+    border-left: 140px solid #7fb4ea;
+    border-right: 140px solid transparent;
+    border-bottom: 105px solid transparent;
+    border-top: 105px solid transparent;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
     z-index: 1;
-
 }
 
-.envelope{
+.envelope {
     position: relative;
-    width: 400px;
-    height: 300px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    width: 280px;
+    height: 140px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
     margin-left: auto;
     margin-right: auto;
-    top: 20px;
+    top: 200px;
     background-color: #ffd89c;
-
 }
 
-.letter{
+.letter {
     background: rgb(161, 57, 57);
     width: 95%;
-    margin-left:auto;
-    margin-right:auto;
-    height: 100%;
-    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    border-radius: 8px;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 8px;
     text-align: center;
-    font-family: 'lalam' , cursive;
+    font-family: 'Lalam', cursive;
+    z-index:5;
 }
 
+.cover-button {
+    position: absolute;
+
+    top: 70%;
+    left: 50%;
+
+    height: 30px;
+    width: 30px;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 1;
+
+    border: none;
+    background-color: #f76868;
+    border-radius: 50%;
+}
 
 .open {
     transform: rotateX(180deg);
@@ -98,61 +111,37 @@ body{
 }
 
 .in {
-    transform: translateY(0px);
+    transform: translateY(0);
     transition: transform 0.5s ease;
     z-index: 3;
 }
 
 .out-partial {
-    transform: translateY(-250px);
+    transform: translateY(-175px);
     transition: transform 0.5s 0.6s ease;
     z-index: 3;
 }
 
-
-.envelopeback{
+.envelopeback {
     z-index: -1;
 }
 
-.cover-button{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 30px;
-    width: 30px;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    border: none;
-    background-color: #f76868;
-    border-radius: 50%;
-}
+@keyframes float {
+  0%{
+    transform: translateY(10px);
+   }
+   50%{
+        transform: translateY(0px);
+    }
+    100%{
+      transform: translateY(10px);
+    }
 
 
-
-
-.comment{
-    position: fixed;
-    top: 30%;
-    left: 35%;
-    width: 40%;
-    height: 40%;
-    background-color: #F8FAFC;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2px;
-    font-family: 'Courier New', Courier, monospace;
-    border:2px solid #ffcaca;
-    opacity: 1;
-    z-index:-1;
-    
-    
 }
 
 .commentappear{
     animation: appear 1s ease-in-out forwards;
-    background-color: #2563EB;
 }
 
 @keyframes appear {
@@ -208,7 +197,7 @@ body{
     justify-content: center;
     align-items: center;
     display: flex;
-    padding: 2px;
+    padding: 5px 5px 5px 5px;
     top:6000px;
     right:30%;
     height: 15%;
