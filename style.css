@@ -204,7 +204,7 @@ body{
 .comment{
     position: fixed;
     top: 30%;
-    left: 0%;
+    left: 30%;
     width: 250px;
     height: 40%;
     padding: 10px 10px 10px 20px;
@@ -222,7 +222,7 @@ body{
     color:#F8FAFC;
     border:2px solid #ffcaca;
     opacity: 1;
-    z-index: -1;
+    z-index: 1;
     
     
 }
