@@ -5,18 +5,19 @@ body{
 .container { 
     max-width: 800px;
     margin: 0 auto;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
     color: #F8FAFC;
-    font-size: 20px;
+    font-size: 30px;
+    place-items: center;
 }
 
-#background {
+#background1 {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    min-width: 400px;
+    min-height: 900px;
     z-index: -1;
 }
 
@@ -27,76 +28,111 @@ body{
 }
 
 .cover.top {
-    border-left: 140px solid transparent;
-    border-right: 140px solid transparent;
-    border-bottom: 105px solid transparent;
-    border-top: 105px solid #F8FAFC;
+    border-left: 120px solid transparent;
+    border-right: 120px solid transparent;
+    border-bottom: 90px solid transparent;
+    border-top: 90px solid #A5B4FC;
     transform-origin: top;
 }
 
 .cover.bottom.right {
-    border-left: 140px solid transparent;
-    border-right: 140px solid #0080ff;
-    border-bottom: 105px solid #0080ff;
-    border-top: 105px solid transparent;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
+    border-left: 120px solid transparent;
+    border-right: 120px solid #4F46E5;
+    border-bottom: 90px solid #4F46E5;
+    border-top: 90px solid transparent;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
     z-index: 1;
 }
 
 .cover.left {
-    border-left: 140px solid #7fb4ea;
-    border-right: 140px solid transparent;
-    border-bottom: 105px solid transparent;
-    border-top: 105px solid transparent;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
+    border-left: 120px solid #6366F1;
+    border-right: 120px solid transparent;
+    border-bottom: 90px solid transparent;
+    border-top: 90px solid transparent;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
     z-index: 1;
 }
 
 .envelope {
     position: relative;
-    width: 280px;
-    height: 140px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    width: 240px;
+    height: 180px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
     margin-left: auto;
     margin-right: auto;
-    top: 200px;
-    background-color: #ffd89c;
+    top: 600px;
+    background-color: #5b5dde;
 }
 
-.letter {
-    background: rgb(161, 57, 57);
+.envelopebacki{
+  animation: envelopeback 1s 5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes envelopeback {
+  0%{
+    z-index:1px;
+  }
+  100%{
+    z-index:-3px;
+    opacity: 0;
+  }
+}
+
+
+.letter{
+    background: #FFF7ED;
     width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-    height: 200px;
-    border-radius: 8px;
+    margin-left:auto;
+    margin-right:auto;
+    height: 100%;
+    border-radius: 10px;
     box-sizing: border-box;
-    padding: 8px;
+    padding: 10px;
     text-align: center;
-    font-family: 'Lalam', cursive;
-    z-index:5;
+    font-size: 10px;
+    font-family: 'Caveat', cursive;
 }
 
-.cover-button {
-    position: absolute;
-
-    top: 70%;
-    left: 50%;
-
-    height: 30px;
-    width: 30px;
-
-    transform: translate(-50%, -50%);
-
-    z-index: 1;
-
-    border: none;
-    background-color: #f76868;
-    border-radius: 50%;
+.letterextender1{
+  animation: extend 3s 3s ease-in-out ;
+  animation-fill-mode: forwards;
 }
+
+
+@keyframes extend {
+  0%{
+    width:300px;
+    height:700px;
+    top:20px;
+    left:20px;
+  }
+  100%{
+    top:0px;
+    left:0px;
+    width:300px;
+    height:700px;
+  }
+}
+
+
+#linker1{
+  border:0px;
+  background-color: #F8FAFC;
+  padding:10px 10px 10px 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height:5px;
+  width:30px;
+  border-radius: 5px;
+  font-size:10px;
+  font-family: 'Caveat', cursive;
+}
+
 
 .open {
     transform: rotateX(180deg);
@@ -111,71 +147,79 @@ body{
 }
 
 .in {
-    transform: translateY(0);
+    transform: translateY(0px);
     transition: transform 0.5s ease;
     z-index: 3;
 }
 
 .out-partial {
-    transform: translateY(-175px);
+    transform: translateY(-250px);
     transition: transform 0.5s 0.6s ease;
     z-index: 3;
 }
 
-.envelopeback {
+
+.envelopeback{
     z-index: -1;
 }
 
-@keyframes float {
-  0%{
-    transform: translateY(10px);
-   }
-   50%{
-        transform: translateY(0px);
-    }
-    100%{
-      transform: translateY(10px);
-    }
+.cover-button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 30px;
+    width: 30px;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border: none;
+    background-color: #f76868;
+    border-radius: 50%;
+}
 
 
+
+
+.comment{
+    position: fixed;
+    top: 30%;
+    left: 20%;
+    width: 250px;
+    height: 40%;
+    padding: 10px 10px 10px 20px;
+    background: linear-gradient(
+      120deg,
+      #2563EB,
+      #7DD3FC
+    );
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: 'Cinzel', serif;
+    color:#F8FAFC;
+    border:2px solid #ffcaca;
+    opacity: 1;
+    z-index: -1;
+    
+    
 }
 
 .commentappear{
-    animation: appear 1s ease-in-out forwards;
-}
-
-@keyframes appear {
-  0%{
-    opacity:0;
-    z-index:-1;
-  }
-  100%{
+    animation: appear 1s linear forwards;
     opacity:1;
     z-index:1;
-  }
+    background-color: #2563EB;
 }
 
-.commnetdisappear{
-  animation: hides 1s ease-in-out forwards ;
-}
-
-@keyframes hides{
-  0%{
-    opacity:1;
-  }
-  100%{
-    opacity:0;
-    z-index: -1;
-  }
-}
 
 
 #gojo{
     position: absolute;
     z-index:10;
-    top:50000px;
+    top:6700px;
     height:300px;
-    animation: gojo 1s 5s ease-in-out, disappear 1s 10s ease-in-out;
+    animation: gojo 1s 5s ease-in-out, disappear 1s 11s ease;
     animation-fill-mode: forwards;
 
 }
@@ -207,8 +251,8 @@ body{
     z-index:1;
     font-size: 20px;
     color: #F8FAFC;
-    font-family: 'Courier New', Courier, monospace;
-    animation: gojotext 1s 5s ease-in-out, disappear 1s 10s ease-in-out;;
+    font-family:'Courier New', Courier, monospace;
+    animation: gojotext 1s 5s ease-in-out, disappear 1s 11s ease-in-out;;
     animation-fill-mode: forwards;
     opacity:1;
 
@@ -235,6 +279,16 @@ body{
         transform: t ranslatey(6000px);
 
     }
+}
+
+
+.paragraph1{
+  position: relative;
+  top:10px;
+  right:10px;
+  border:10px;
+  height:60px;
+  width:10px;
 }
 
 

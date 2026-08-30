@@ -62,6 +62,8 @@ function openEnvelope() {
     bottomright.classList.add('envelopeback');
     letter.classList.remove('in');
     letter.classList.add('out-partial');
+    letter.classList.add('letterextender')
+    envelope.classList.add('envelopeback');
 
 }
 
@@ -87,6 +89,10 @@ function closing() {
     }
 }
 
+function things(){
+    window.location.href = "things.html";
+}
+
 
 
 //flower bloowms
@@ -97,3 +103,10 @@ onload = () => {
   }, 1000);
 };
 
+if (document.body.id === "things-page") {
+
+    setTimeout(() => {
+        alert("12 THINGS I LIKE ABOUT MY MAJESTY");
+    }, 11000);
+
+}

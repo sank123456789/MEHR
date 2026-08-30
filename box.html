@@ -1,11 +1,459 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>One Last Thing ♡</title>
+
+
+    <!-- Fonts -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+
+
+    <!-- CSS -->
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            background: #172554;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 30px;
+
+            overflow-y: auto;
+
+        }
+
+
+        /* Main letter */
+
+        .message {
+
+            width: min(90%, 750px);
+
+            background: #FFF7ED;
+
+            padding: 45px 50px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.35);
+
+            text-align: center;
+
+            animation:
+                appear 1.5s ease forwards;
+
+        }
+
+
+        /* Opening line */
+
+        .paragraph1 {
+
+            font-family:
+                "Great Vibes",
+                cursive;
+
+            color: #172554;
+
+            font-size:
+                clamp(30px, 5vw, 45px);
+
+            line-height: 1.5;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        /* Main paragraphs */
+
+        .text {
+
+            display: block;
+
+            margin-top: 25px;
+
+            font-family:
+                "Cinzel",
+                serif;
+
+            color: #172554;
+
+            font-size:
+                clamp(14px, 2vw, 18px);
+
+            line-height: 2;
+
+        }
+
+
+        /* Your Majesty */
+
+        .majesty {
+
+            font-family:
+                "Great Vibes",
+                cursive;
+
+            color: #2563EB;
+
+            font-size:
+                clamp(25px, 4vw, 35px);
+
+        }
+
+
+        /* Final question */
+
+        .question {
+
+            display: block;
+
+            margin-top: 40px;
+
+            font-family:
+                "Great Vibes",
+                cursive;
+
+            color: #2563EB;
+
+            font-size:
+                clamp(35px, 6vw, 50px);
+
+            line-height: 1.4;
+
+        }
+
+
+        /* Heart */
+
+        .heart {
+
+            margin-top: 25px;
+
+            font-size: 35px;
+
+            color: #F9A8B8;
+
+            animation:
+                heartbeat 2s infinite;
+
+        }
+
+
+        /* Letter entrance */
+
+        @keyframes appear {
+
+            0% {
+
+                opacity: 0;
+
+                transform:
+                    translateY(40px)
+                    scale(0.95);
+
+            }
+
+            100% {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0)
+                    scale(1);
+
+            }
+
+        }
+
+
+        /* Heart animation */
+
+        @keyframes heartbeat {
+
+            0%,
+            100% {
+
+                transform:
+                    scale(1);
+
+            }
+
+            50% {
+
+                transform:
+                    scale(1.15);
+
+            }
+
+        }
+
+
+        /* Phone */
+
+        @media (max-width: 600px) {
+
+            body {
+
+                padding: 15px;
+
+                align-items: flex-start;
+
+            }
+
+
+            .message {
+
+                width: 95%;
+
+                padding:
+                    30px 22px;
+
+                margin-top: 20px;
+
+                margin-bottom: 20px;
+
+            }
+
+
+            .text {
+
+                line-height: 1.8;
+
+            }
+
+        }
+
+    </style>
+
 </head>
+
+
 <body>
-    
+
+
+    <div class="message">
+
+
+        <!-- Opening -->
+
+        <p class="paragraph1">
+
+            And after everything I've written here...
+
+        </p>
+
+
+
+        <!-- First part -->
+
+        <span class="text">
+
+            I guess there's really only one thing
+            left for me to say,
+
+            <br>
+
+            <span class="majesty">
+                Your Majesty.
+            </span>
+
+        </span>
+
+
+
+        <!-- Distance -->
+
+        <span class="text">
+
+            I know we're far away from each other.
+
+            <br>
+
+            Different countries,
+            different places,
+            and different lives happening
+            around us.
+
+            <br><br>
+
+            And maybe that makes things
+            a little more complicated
+            than they would otherwise be.
+
+        </span>
+
+
+
+        <!-- Feelings -->
+
+        <span class="text">
+
+            But honestly...
+
+            <br><br>
+
+            Distance doesn't change how much
+            I enjoy having you in my life.
+
+            <br><br>
+
+            Every conversation,
+            every stupid joke,
+            every random moment,
+            and every memory we've made
+
+            <br>
+
+            means more to me than
+            you probably realize.
+
+        </span>
+
+
+
+        <!-- Future -->
+
+        <span class="text">
+
+            I don't know what the future
+            looks like,
+
+            <br>
+
+            and I don't want to pretend
+            that I do.
+
+            <br><br>
+
+            I just know that I'd really like
+            to keep making memories with you.
+
+            <br><br>
+
+            Even if, for now,
+            those memories are made
+            through a screen
+
+            <br>
+
+            and across thousands
+            of kilometers.
+
+        </span>
+
+
+
+        <!-- No pressure -->
+
+        <span class="text">
+
+            So this isn't some huge promise.
+
+            <br><br>
+
+            And it's not meant to put
+            any pressure on you.
+
+            <br><br>
+
+            It's just a little invitation...
+
+        </span>
+
+
+
+        <!-- Invitation -->
+
+        <span class="text">
+
+            An invitation to keep talking.
+
+            <br>
+
+            To keep laughing.
+
+            <br>
+
+            To keep annoying each other.
+
+            <br>
+
+            To keep making stupid memories.
+
+            <br><br>
+
+            And maybe...
+
+            <br>
+
+            see where this little story
+            takes us.
+
+        </span>
+
+
+
+        <!-- Final question -->
+
+        <span class="question">
+
+            So, Your Majesty...
+
+            <br><br>
+
+            Will you? ♡
+
+        </span>
+
+
+
+        <!-- Heart -->
+
+        <div class="heart">
+
+            ♡
+
+        </div>
+
+
+    </div>
+
+
 </body>
+
 </html>
