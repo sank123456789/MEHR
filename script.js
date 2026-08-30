@@ -1,6 +1,6 @@
 'user strict';
 
-var commentsopened = 0;
+var commentsopened = new Set();
 
 (function() {
     var envelope = document.getElementById('envelope');
@@ -66,92 +66,28 @@ function openEnvelope() {
 }
 
 // functions to handle flower leaf clicks
-function comments1(){
+function comments(number) {
+    document
+        .getElementById(`comment${number}`)
+        .classList.add('commentappear');
 
-  document.getElementById("comment1").classList.add('commentappear');
-    
-}
-function closing(){
-    document.getElementById("comment1").classList.remove('commentappear');
-    document.getElementById("comment2").classList.remove('commentappear');
-    document.getElementById("comment3").classList.remove('commentappear');
-    document.getElementById("comment4").classList.remove('commentappear');
-    document.getElementById("comment5").classList.remove('commentappear');
-    document.getElementById("comment6").classList.remove('commentappear');
-    document.getElementById("comment7").classList.remove('commentappear');
-    document.getElementById("comment8").classList.remove('commentappear');
-    document.getElementById("comment9").classList.remove('commentappear');
-    document.getElementById("comment10").classList.remove('commentappear');
-    document.getElementById("comment11").classList.remove('commentappear');
-    document.getElementById("comment12").classList.remove('commentappear');
-    commentsopened++;
+    commentsopened.add(number);
 }
 
-function comments2(){
+function closing() {
 
-  document.getElementById("comment2").classList.add('commentappear');
-    
+    for (let i = 1; i <= 12; i++) {
+        document
+            .getElementById(`comment${i}`)
+            .classList.remove('commentappear');
+    }
+
+    if (commentsopened.size === 12) {
+        window.location.href = "box.html";
+    }
 }
 
-function comments3(){
 
-  document.getElementById("comment3").classList.add('commentappear');
-    
-}
-
-function comments4(){
-
-  document.getElementById("comment4").classList.add('commentappear');
-    
-}
-
-function comments5(){
-
-  document.getElementById("comment5").classList.add('commentappear');
-    
-}
-
-function comments6(){
-
-  document.getElementById("comment6").classList.add('commentappear');
-    
-}
-
-function comments7(){
-
-  document.getElementById("comment7").classList.add('commentappear');
-    
-}
-
-function comments8(){
-
-  document.getElementById("comment8").classList.add('commentappear');
-    
-}
-
-function comments9(){
-
-  document.getElementById("comment9").classList.add('commentappear');
-    
-}
-
-function comments10(){
-
-  document.getElementById("comment10").classList.add('commentappear');
-    
-}
-
-function comments11(){
-
-  document.getElementById("comment11").classList.add('commentappear');
-    
-}
-
-function comments12(){
-
-  document.getElementById("comment12").classList.add('commentappear');
-    
-}
 
 //flower bloowms
 onload = () => {
