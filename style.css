@@ -93,7 +93,7 @@ body{
     box-sizing: border-box;
     padding: 10px;
     text-align: center;
-    font-size: 10px;
+    font-size: 15px;
     font-family: 'Caveat', cursive;
 }
 
@@ -118,31 +118,20 @@ body{
   }
 }
 
-#linker1 {
-  border: 0;
-  background-color: #F9A8B8;
 
-  width: 40px;
-  height: 40px;
-
-  clip-path: polygon(
-    50% 90%,
-    10% 45%,
-    10% 25%,
-    20% 10%,
-    35% 10%,
-    50% 25%,
-    65% 10%,
-    80% 10%,
-    90% 25%,
-    90% 45%
-  );
-
-  display: flex;
+#linker1{
+  position: absolute;
+  border:0px;
+  background-color: #F8FAFC;
+  padding:10px 10px 10px 10px;
   justify-content: center;
   align-items: center;
-
-  font-size: 10px;
+  display: flex;
+  top: 75%;
+  left: 5%;
+  width:30px;
+  border-radius: 5px;
+  font-size:10px;
   font-family: 'Caveat', cursive;
 }
 
@@ -176,17 +165,37 @@ body{
     z-index: -1;
 }
 
-.cover-button{
+.cover-button {
     position: absolute;
     top: 50%;
     left: 50%;
-    height: 30px;
-    width: 30px;
+
+    width: 32px;
+    height: 32px;
+
     transform: translate(-50%, -50%);
+
     z-index: 1;
     border: none;
-    background-color: #f76868;
-    border-radius: 50%;
+
+    background: #F9A8B8;
+
+    clip-path: polygon(
+        50% 92%,
+        8% 48%,
+        5% 35%,
+        8% 20%,
+        18% 10%,
+        30% 8%,
+        40% 12%,
+        50% 23%,
+        60% 12%,
+        70% 8%,
+        82% 10%,
+        92% 20%,
+        95% 35%,
+        92% 48%
+    );
 }
 
 
@@ -195,7 +204,7 @@ body{
 .comment{
     position: fixed;
     top: 30%;
-    left: 30%;
+    left: 0%;
     width: 250px;
     height: 40%;
     padding: 10px 10px 10px 20px;
