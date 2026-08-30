@@ -1,6 +1,7 @@
 'user strict';
 
 var commentsopened = new Set();
+var number = 1;
 
 (function() {
     var envelope = document.getElementById('envelope');
@@ -68,12 +69,13 @@ function openEnvelope() {
 }
 
 // functions to handle flower leaf clicks
-function comments(number) {
+function comments() {
     document
         .getElementById(`comment${number}`)
         .classList.add('commentappear');
 
     commentsopened.add(number);
+    number++;
 }
 
 function closing() {
@@ -87,6 +89,7 @@ function closing() {
     if (commentsopened.size === 12) {
         window.location.href = "box.html";
     }
+    comments()
 }
 
 function things(){
