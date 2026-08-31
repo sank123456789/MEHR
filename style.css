@@ -217,12 +217,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 15px;
     font-family: 'Cinzel', serif;
     color:#F8FAFC;
     border:2px solid #ffcaca;
     opacity: 1;
-    z-index: 1;
+    z-index: -1;
     
     
 }
